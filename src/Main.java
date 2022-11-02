@@ -40,14 +40,14 @@ public class Main {
         CategoryList.add(Category13);
         CategoryList.add(Category14);
 
-
         Category_Manage CateMa = new Category_Manage();
         Category target = CateMa.Search_category(CategoryList, "Woman");
-        JSONObject result = new JSONObject();
+        JSONObject result = new JSONObject(); //카테고리를 json으로 담을 오브젝트
         JSONObject result2 = new JSONObject() ;
         JSONObject result3 = new JSONObject() ;
-        result2.put("카테고리",CateMa.Category_Path(CategoryList, target, result));
-        result3.put("카테고리",CateMa.AllCategory_Path(CategoryList, result));
+        result2.put("카테고리",CateMa.Category_Path(CategoryList, target, result)); //검색 기능 테스트 
+        result3.put("카테고리",CateMa.AllCategory_Path(CategoryList, result)); //json 구조 변환 응답 테스트
+        System.out.print(result2);
         System.out.print(result3);
 
 
